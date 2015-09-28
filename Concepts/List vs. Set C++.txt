@@ -1,0 +1,15 @@
+List:
+
+1 - Searching (linear time). O(n)
+2 - Inserting, deleting, moving (takes constant time).
+3 - Elements may be ordered by insertion order.
+4 - Elements may be sorted.
+5 - Elements may be duplicate.
+
+Set:
+
+1 - Searching (logarithmic in size). O(logn)
+2 - Insert and delete (logarithimic in general).
+3 - Elements aren't ordered by insertion order.
+4 - Elements are always sorted from lower to higher.
+5 - Elements are unique.
