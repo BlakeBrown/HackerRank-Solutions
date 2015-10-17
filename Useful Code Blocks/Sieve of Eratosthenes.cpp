@@ -19,3 +19,11 @@ for(long long i = 2; i < N; i++) {
     	cout<<i<<" is prime!\n";
     }
 }
+
+
+
+// Note: Since every even number >= 4 is not prime, the sieve can be optimized 
+// memory-wise by transforming indices. We can transform the array like so: 
+//   [1, 2, 3, 4 , 5]... i 
+// ->[3, 5, 7, 9, 11]... j = 2i+1 
+// This removes almost half the array and saves us from checking even numbers for primality
