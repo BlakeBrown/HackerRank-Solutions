@@ -6,7 +6,7 @@ for(long long i = 0; i < N; i++) {
     primes[i] = true;
 }
 // Perform sieve
-for(long long i = 2; i < (long long) sqrt((double)N); i++) {
+for(long long i = 2; i*i < N; i++) {
     if(primes[i]) {
         for(long long j = (i*i); j < N; j+=i) {
             primes[j] = false;
