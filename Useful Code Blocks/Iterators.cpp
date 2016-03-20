@@ -10,11 +10,11 @@ for(auto it = my_list.begin(); it != my_list.end(); ++it) {
 map<int, int>::iterator it;
 for(it = my_map.begin(); it != my_map.end(); it++) {
 	int key = it->first;
-	int value = i->second;
+	int value = it->second;
 }
 // From end to start
 map<int, int>::reverse_iterator it;
 for(it = my_map.rbegin(); it != my_map.rend(); it++) {
 	int key = it->first;
-	int value = i->second;
+	int value = it->second;
 }
