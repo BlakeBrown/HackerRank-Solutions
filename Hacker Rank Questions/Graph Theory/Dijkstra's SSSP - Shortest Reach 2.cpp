@@ -9,6 +9,20 @@
 #include <limits.h>
 using namespace std;
 
+// Dijkstra's is a greedy SSSP (single source shortest path) algorithm
+// - When the algorithm finishes, the shortest distance from source to all other vertex's in the graph will be known
+// - Dikstra's only works for graphs with positive edge weights (use Bellman-Ford for negative edge weights)
+// Description of Algorithm:
+// 1. Create a set of unvisited vertices, all with initial distance INF
+// 2. Mark the source node as visited with distance 0, update its neighbours to have distance equal to their edge weight
+// 3. Find the unvisited vertex with the minimum distance (call it U)
+// 4. Calculate the distance from U to each of its unvisited neighbours (call it D)
+// 5. If D < the distance at that node, update the nodes distance from source
+// 6. Mark U as visited
+// Repeat steps 3-6 until the destination node is reached or till no unvisited vertex is found
+// Total Runtime: O(V^2) in current implementation
+// Can improve runtime to O(ElogV) using a heap
+
 map<int, int>::iterator it;
 
 void insertEdge(map<int,int>& map, int vertex, int weight) {

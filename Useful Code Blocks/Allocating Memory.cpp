@@ -13,6 +13,14 @@ int array[1000];
 // - Unlike the stack, the memory is not managed for you and if you fail to free()/delete the memory you allocated, you'll have a memory leak
 int *array = new int[1000];
 
+// Double array in C++
+int **adjacency_matrix = new int*[N];
+for(int i = 0; i < N; i++) {
+	adjacency_matrix[i] = new int[N];
+	for(int j = 0; j < N; j++) {
+		adjacency_matrix[i][j] = -1;
+	}
+}
 
 
 

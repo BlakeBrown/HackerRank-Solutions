@@ -6,11 +6,17 @@
 #include <limits.h>
 using namespace std;
 
-// Quick description of Prim's Algorithm to find MST (minimum spanning tree):
+// Prim's Algorithm is a greedy node-based algorithm that finds a MST (minimum spanning tree) in a graph
+// Description of Algorithm:
 // 1. Begin with a set of visited nodes that originally only contains the starting node
 // 2. Iterate over the set of visited nodes and find the minimum weighted edge connecting a visited node with an unvisited node
 // 3. Add the unvisited node to the set of visited nodes and add the weight of the edge to the size of the MST
 // 4. Repeat step 2-3 until there are no longer any unvisited nodes
+// Total runtime: Current implementation is O(V^3) but we can reduce this significantly
+// We can get it down to O(V^2) using a more clever way to store the solved vertices
+// We can get it down to O(ElogV) using a fibonacci heap + adjacency list 
+// See: http://www.geeksforgeeks.org/greedy-algorithms-set-5-prims-minimum-spanning-tree-mst-2/ for more details
+
 int main() {
 	int N, M, S;
 	cin>>N>>M;
