@@ -11,6 +11,9 @@ int number = stoi(s); // For long to string or long long to string, we can use s
 // Integer to string
 int number;
 string s = to_string(number);
+// Char to number
+char a = '4';
+int inta = a - '0'; // Sets a = 4
 
 //===================
 //====== Java =======
