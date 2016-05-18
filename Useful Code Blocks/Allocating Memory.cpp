@@ -1,3 +1,32 @@
+// Initialize 2D array
+int **adjacency_matrix = new int*[N];
+for(int i = 0; i < N; i++) {
+	adjacency_matrix[i] = new int[N];
+	for(int j = 0; j < N; j++) {
+		adjacency_matrix[i][j] = -1;
+	}
+}
+
+// Memset = set an existing block of memory (in this case an array) to a specified value (in this case zero)
+#include <string.h>
+int *array = new int[N];
+memset(array, 0, sizeof(array));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Old notes on stack declaration vs. heap declaration
+
 // http://www.cplusplus.com/doc/tutorial/dynamic/
 // Normal declarations will allocate memory on the STACK 
 // To summarize the stack (http://gribblelab.org/CBootcamp/7_Memory_Stack_vs_Heap.html): 
@@ -12,17 +41,6 @@ int array[1000];
 // - Unlike the stack, variables created on the heap are accessible by any function, anywhere in your program. Heap variables are essentially global in scope.
 // - Unlike the stack, the memory is not managed for you and if you fail to free()/delete the memory you allocated, you'll have a memory leak
 int *array = new int[1000];
-
-// Double array in C++
-int **adjacency_matrix = new int*[N];
-for(int i = 0; i < N; i++) {
-	adjacency_matrix[i] = new int[N];
-	for(int j = 0; j < N; j++) {
-		adjacency_matrix[i][j] = -1;
-	}
-}
-
-
 
 // Stack vs Heap Pros and Cons
 

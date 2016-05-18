@@ -9,7 +9,7 @@
 // If the decreasing substring is ever broken (ie a lexographically bigger char comes after a lexographically smaller char)
 // ex. 2431: 431 is decreasing but then 2 breaks the sequence
 // Call the decreasing substring the suffix and the char that breaks the sequence the pivot
-// ex.  431 = decreasing substring and 2 = pivot 
+// ex.  431 = suffix and 2 = pivot 
 // Swap the pivot with the next lexographically larger char in the suffix
 // ex. 2431 -> 3421
 // Sort the suffix to be lexographically increasing
