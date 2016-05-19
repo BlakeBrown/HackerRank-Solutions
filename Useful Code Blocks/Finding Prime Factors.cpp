@@ -1,6 +1,5 @@
-// === Example 1: Find the # of prime factors === 
+// Example 1: Find the # of prime factors (optimized)
 
-// Optimized version
 int numPrimeFactors = 0;
 if(number == 1) {
     numPrimeFactors = 0;
@@ -11,7 +10,7 @@ if(number == 1) {
     // Calculate # of prime factors
     while(number > 1) {
         bool foundFactor = false;
-        for(long j = 2; j*j <= number; j++) {
+        for(long j = 3; j*j <= number; j+=2) {
             if(number%j == 0) {
                 numPrimeFactors++;
                 number /= j;

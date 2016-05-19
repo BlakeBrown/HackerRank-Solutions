@@ -8,7 +8,8 @@ using namespace std;
 
 // Floyd-Warshall is an APSP (all pairs shortest path) algorithm
 // - When the algorithm finishes, the shortest path between any two vertices in the graph will be known
-// - We could just call Dijkstra's or Bellman-Ford on every vertex in the graph, but Floyd-Warshall is generally much faster
+// - Note: We could just call Dijkstra's or Bellman-Ford on every vertex in the graph, but Floyd-Warshall
+// is more efficient
 
 int main() {
     int V, E;

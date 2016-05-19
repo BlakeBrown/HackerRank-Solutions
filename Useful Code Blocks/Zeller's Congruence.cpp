@@ -1,4 +1,4 @@
-// Zeller's congruence    
+// Zeller's congruence: Returns an int representing the day
 // 0 = saturday, 1 = sunday, 2 = monday, 3 = tuesday, 4 = wednesday, 5 = thursday, 6 = friday
 int dayOfTheWeek(long long year, long long month, long long day) {
     if(month == 1) {
