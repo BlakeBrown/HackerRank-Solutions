@@ -18,8 +18,8 @@ int main() {
     // Create array of minimum distances initialized to ∞ (infinity)
     // When Floyd-Warshall finishes, dist[i][j] represents the shortest distance from vertex i to vertex j
     int **dist = new int*[V];
-                                    for(int i = 0; i < V; i++) {
-                                        dist[i] = new int[V];
+    for(int i = 0; i < V; i++) {
+        dist[i] = new int[V];
         for(int j = 0; j < V; j++) {
             if(i != j) {
                 dist[i][j] = INT_MAX;
