@@ -1,3 +1,6 @@
+// Helpful link for understanding C++ iterators: 
+// http://www.cs.northwestern.edu/~riesbeck/programming/c++/stl-iterators.html
+
 // List iterator: 
 // Note: "auto" automatically grabs the correct iterator type 
 for(auto it = my_list.begin(); it != my_list.end(); ++it) {
