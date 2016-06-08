@@ -1,19 +1,22 @@
-// Ex 1. Integer array
+// Note that
 #include <algorithm>
-int *input = new int[n];
-sort(input, input+n);
+// is required to use sort()
 
-// Note: to sort descending we define the following
+// Ex 1. Integer array, sort ascending
+int *arr = new int[n];
+sort(arr, arr+n);
 
-// Helper method for std::sort, sorts descending
+// Ex 2. Integer array, sort descending
+int *arr = new int[n];
 bool comp(int i, int j) { 
 	return i > j; 
 }
+sort(arr, arr+n, comp);
 
-// and make use of the 3rd parameter
-sort(input, input+n, comp);
-
-// Ex 2. String
-#include <algorithm>
+// Ex 3. String
 string s = "dcba";
 sort(s.begin(), s.end());
+
+// Ex 4. Vector
+vector<int> vec;
+sort(vec.begin(), vec.end());
