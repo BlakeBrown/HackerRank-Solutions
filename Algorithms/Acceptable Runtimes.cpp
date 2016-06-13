@@ -1,6 +1,6 @@
 // Acceptable Runtimes for Given Values of N: 
 
-// General rule: Try to keep the number of iterations under a million
+// General rule: Try to keep the number of iterations under a few million
 
 // 1) when N <= 10, then both O(N!) and O(2^N) are will run fine  (for 2^N, N <= 20 )    
 // 2) when N <= 100 ; then O(N^3).
