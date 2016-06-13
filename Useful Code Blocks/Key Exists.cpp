@@ -1,6 +1,6 @@
-// Check if key exists in map
+// Check if a key exists in map
 
-// Iterator
+// Method 1: Iterator
 map<int,int>::iterator it;
 map<int,int> m;
 it = m.find(variable);
@@ -11,7 +11,7 @@ if(it == m.end()) {
 	int found_value = it->second;
 }
 
-// Count
+// Method 2: Count
 if(m.count(variable) == 0) {
 	// Not found
 }
