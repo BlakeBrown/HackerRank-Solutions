@@ -1,4 +1,4 @@
-// Check if a key exists in map
+// Check if a key exists in a map
 
 // Method 1: Iterator
 map<int,int>::iterator it;
