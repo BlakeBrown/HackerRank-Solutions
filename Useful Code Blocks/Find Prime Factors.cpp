@@ -1,5 +1,5 @@
 // Example 1: Find the # of prime factors of a given number
-// Uses an optimized version of sieve of eratosthenes
+// Uses an optimized version of sieve of eratosthenes (lower constant factor)
 int numPrimeFactors = 0;
 if(number == 1) {
     // Edge case
