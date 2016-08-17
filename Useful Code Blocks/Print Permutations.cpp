@@ -22,40 +22,21 @@
 using namespace std;
 
 void permute(string s, unordered_map<char,int> count, string perm) {
-	// cout<<"New iteration\n";
-	// if(perm.size() == s.size()-1) {
-	// 	cout<<"Length 1\n";
-	// 	perm += s[0];
-	// 	cout<<perm<<"\n";
-	// 	return;
-	// } else {
-		// cout<<"hello world\n";
-	// cout<<"new iteration\n";
 		unordered_map<char,int>::iterator it;	
 		for(it = count.begin(); it != count.end(); it++) {
-			// cout<<"testing new char...\n";
 			if(it->second > 0) {
-				// cout<<count[it->first]<<"\n";
 				count[it->first]--;
-				// cout<<count[it->first]<<"\n";
-				// cout<<perm<<" + "<<it->first<<" = "<<perm + it->first<<"\n";
 				if(s.size() - perm.size() == 1) {
 					// Permutation is complete
 					cout<<perm + it->first<<"\n";
 				} else {
 					permute(s, count, perm + it->first);
 				}
-				// cout<<"test\n";
-				// cout<<"finished with "<<it->first<<"\n";
 				count[it->first]++;
-				// cout<<"incremented\n";
 			}
 		}
-		// cout<<perm<<"\n";
-	// }
 }
 
-// Powerset = set of all subsets
 void printPermutations(string s) {
 	// Count the number of times each letter appears in the string
 	unordered_map<char,int> count; // count['a'] -> # of times 'a' appears in s
@@ -67,6 +48,6 @@ void printPermutations(string s) {
 
 int main()
 {
-    printPermutations("abcdefghijklmnopqrstuvwxyz"); // prints all subsets of abcd
+    printPermutations("abcd"); // prints all permutations of abcd
     return 0;
 }
