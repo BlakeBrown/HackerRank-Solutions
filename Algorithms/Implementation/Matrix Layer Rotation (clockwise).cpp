@@ -5,10 +5,8 @@
 #include <algorithm>
 using namespace std;
 
-// Note: A faster algorithm (same time complexity, but lower constant factor) exists for rotating
-// matrices by 90 degrees (extendable to 180, 270, etc). Simply transpose the matrix then 
-// swap every left column with its matching right column.
-// i.e in a 3x3 matrix, transpose the matrix than swap column 1 with column 3
+// Main algorithm: in order to rotate the whole matrix, we'll just rotate one ring at a time
+// We can do this in-place to achieve O(1) additional space complexity
 int main() {
 	int M, N, R;
 	cin>>M>>N>>R;
@@ -19,7 +17,7 @@ int main() {
 			cin>>matrix[i][j];
 		}
 	}
-	// Main algorithm: in order to rotate the whole matrix, we'll just rotate each ring at a time
+
 	int numRings = min(M,N)/2;
 	for(int i = 0; i < numRings; i++) {
 		// Subtract the number of 360 degree rotations from R
@@ -101,3 +99,8 @@ int main() {
 	}
     return 0;
 }
+
+// Additional info: A faster algorithm (same time complexity, but lower constant factor) exists 
+// for rotating matrices by 90 degrees (extendable to 180, 270, etc). Simply transpose the 
+// matrix then swap every left column with its matching right column.
+// i.e To rotate a 3x3 matrix by 90 degrees, transpose the matrix than swap column 1 with column 3

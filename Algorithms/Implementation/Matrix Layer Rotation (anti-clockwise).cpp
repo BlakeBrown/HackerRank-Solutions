@@ -5,10 +5,8 @@
 #include <algorithm>
 using namespace std;
 
-// This question basically involves playing around with indices until you get the correct resultant 
-// matrix. However we can achieve an additional space complexity of O(1) by swapping elements in the 
-// existing matrix rather than copying them into a new one. Both my clockwise and anti-clockwise
-// solutions use this approach of rotating the matrix in-place. 
+// Main algorithm: in order to rotate the whole matrix, we'll just rotate one ring at a time
+// We can do this in-place to achieve O(1) additional space complexity
 int main() {
 	int M, N, R;
 	cin>>M>>N>>R;
@@ -20,14 +18,13 @@ int main() {
 		}
 	}
 
-	// Main algorithm: in order to rotate the whole matrix, we'll just rotate each ring at a time
 	int numRings = min(M,N)/2;
 	for(int i = 0; i < numRings; i++) {
 		// Subtract the number of 360 degree rotations from R
 		// A 360 degree rotation = rotating the same number of times as the perimeter of the current ring
 		int numRotations = R%(2*(M + N - 4*i) - 4);
 		for(int rotation = 0; rotation < numRotations; rotation++) {
-			// Rotate the ring (see the clockwise version for an in-depth example of how this is done)
+			// Rotate the ring (see the clockwise algorithm for an in-depth example of how this is done)
 			// Rotate top row
 			for(int j = i; j < N-i-1; j++) {
 				int tmp = matrix[i][j];
