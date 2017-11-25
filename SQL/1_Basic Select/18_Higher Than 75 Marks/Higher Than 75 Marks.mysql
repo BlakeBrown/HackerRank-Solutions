@@ -1,0 +1,7 @@
+/*
+Working Platform:- DB2, MySQL, MS SQL Server
+*/
+SELECT NAME 
+FROM STUDENTS 
+WHERE MARKS > 75 
+ORDER BY RIGHT(NAME, 3), ID ASC;
