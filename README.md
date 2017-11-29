@@ -13,3 +13,4 @@ Contributions are always appreciated!
 * Open an issue to request help with a specific HackerRank problem
 * Make a pull request if you'd like to add a solution yourself
 
+Prefer LeetCode problems? Find my LeetCode solutions [here](https://github.com/BlakeBrown/LeetCode-Solutions)
