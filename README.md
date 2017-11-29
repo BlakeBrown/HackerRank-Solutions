@@ -1,6 +1,6 @@
 # HackerRank Solutions #
 
-### New Questions Added Regularly ###
+### New Solutions Added Regularly ###
 
 Looking to land your next job interview, score higher in coding competitions, or just improve
 your current understanding of algorithms? You've come to the right place.
