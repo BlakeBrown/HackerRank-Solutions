@@ -1,0 +1,5 @@
+/*
+Working Platform:- DB2, MySQL, Oracle, MS SQL Server
+*/
+SELECT MAX(POPULATION)-MIN(POPULATION)
+FROM CITY;
