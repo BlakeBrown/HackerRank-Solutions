@@ -21,7 +21,7 @@ int main() {
 		}
 	}
 	// Second pass, give candies to the left
-	for(long long i = N-1; i >= 0; i--) {
+	for(long long i = N-2; i >= 0; i--) {
 		// This time, we need to consider max{candies[i], candies[i+1]+1}
 		// since we don't know whether the ascending or descending trend is larger
 		if(rating[i] > rating[i+1] && candies[i] < candies[i+1]+1) {
