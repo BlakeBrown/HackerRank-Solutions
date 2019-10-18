@@ -1,0 +1,61 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int q,i=1;
+    scanf("%d",&q);
+    while(i<=q)
+    {
+        int n,k,e=0;
+        scanf("%d%d",&n,&k);
+    int a[n],b[n],c[n];
+    for(int i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    for(int v=0;v<n;v++)
+    scanf("%d",&b[v]);
+    for(int j=0;j<n;j++)
+    {
+    c[j]=k-b[j];
+    }
+    for(int h=0;h<n;h++)
+    {
+        for(int x=0;x<n-1;x++)
+        { int temp,mom;
+            if(c[x]>c[x+1])
+            { temp = c[x];
+            c[x]=c[x+1];
+            c[x+1]=temp;
+            }
+            if(a[x]>a[x+1])
+            {
+                mom=a[x];
+                a[x]=a[x+1];
+                a[x+1]=mom;
+            }
+        }
+    }
+    for(int z=0;z<n;z++)
+    {
+        if(a[z]>=c[z])
+         e++;
+        
+    }
+    if(e==n)
+    printf("YES\n");
+    else
+    printf("NO\n");
+    i++;
+    }
+    return 0;
+
+}
