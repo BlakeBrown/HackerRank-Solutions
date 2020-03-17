@@ -15,7 +15,7 @@ int main()
      {
     int z;
     cin>>z;
-    z=z+n-x;
+    z=n+z-x;
     if(z>=n)
     z=z%n;
     cout<<a[z]<<endl;
