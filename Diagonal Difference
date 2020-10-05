@@ -1,0 +1,27 @@
+ public static int diagonalDifference(List<List<Integer>> arr) 
+    {
+    // Write your code here
+    int i,j;
+    int sum1=0,sum2=0;
+    int n =arr.size();
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if (i == j) 
+                sum1 += arr.get(i).get(j); 
+  
+            if ((i + j) == (n - 1)) 
+                sum2 += arr.get(i).get(j); 
+        }
+    }
+    if(sum1 < sum2)
+    {
+        return (sum2 - sum1);
+    }
+    else
+    {
+        return (sum1-sum2);
+    }
+
+    }
