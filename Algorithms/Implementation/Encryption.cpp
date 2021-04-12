@@ -19,57 +19,6 @@ void encryption(string s) {
         cout << ' ';
         }
 
-   /* if(lo*hi>=l)
-    {
-        int k=0;
-        char ar[lo][hi];
-        while(k<l)
-        {
-        for(int i=0;i<lo;i++)
-        {
-           for(int j=0;j<hi;j++)
-           {
-               ar[i][j]=s.at(k);
-               k++;
-
-           }
-        }
-     }
-     for(int i=0;i<hi;i++)
-        {
-           for(int j=0;j<hi-1;j++)
-           {
-             cout<<ar[j][i];
-           }
-           cout<<" ";
-        }
-    }
-    else if(lo*hi<l)
-    {
-         int k=0;
-        char ar[hi][hi];
-        while(k<l)
-        {
-        for(int i=0;i<hi;i++)
-        {
-           for(int j=0;j<hi;j++)
-           {
-               ar[i][j]=s.at(k);
-               k++;
-           }
-        }
-     }
-     for(int i=0;i<hi;i++)
-        {
-           for(int j=0;j<hi-1;j++)
-           {
-             cout<<ar[j][i];
-           }
-           cout<<" ";
-        }
-    }
-    */
-
 }
 
 int main()
