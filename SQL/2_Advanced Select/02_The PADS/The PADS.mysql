@@ -8,3 +8,21 @@ SELECT CONCAT('There are a total of ',COUNT(OCCUPATION),' ',LOWER(OCCUPATION),'s
 FROM OCCUPATIONS
 GROUP BY OCCUPATION
 ORDER BY COUNT(OCCUPATION), OCCUPATION;
+
+-- select case
+-- when occupation ='doctor' then concat(name,'(D)')
+-- when occupation = 'actor' then concat(name,'(A)')
+-- when occupation = 'singer' then concat(name,'(S)')
+-- else concat(name,'(P)')
+-- end 
+-- from occupations
+-- order by name;
+-- select case 
+-- when occupation ='doctor' then concat('There are a total of ',count(occupation),' doctors.')
+-- when occupation = 'actor' then concat('There are a total of ',count(occupation),' actors.')
+-- when occupation = 'singer' then concat('There are a total of ',count(occupation),' singers.')
+-- else concat('There are a total of ',count(occupation),' professors.')
+-- end as h
+-- from occupations
+-- group by occupation
+-- order by count(occupation), occupation;
