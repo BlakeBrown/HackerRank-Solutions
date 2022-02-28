@@ -13,3 +13,42 @@ GROUP BY HACKER_ID ORDER BY COUNT(SUBMISSION_ID) DESC, HACKER_ID LIMIT 1) AS TMP
 FROM
 (SELECT DISTINCT SUBMISSION_DATE FROM SUBMISSIONS) S1
 GROUP BY SUBMISSION_DATE;
+
+/*
+Output:
+    1.distinct submission date,
+    2.total no. of unqie hackers who made at least 1 submission each day consecutively,
+    3.hacker_id who has max. no. of submissions each day (order by hacker_id ASC)
+    4.corresponding hacker name from 3
+
+Order by:
+    submission date
+
+note: This is basically a two part question. 2 being first part, 3&4 being second part and they are not related to each other. Hackers don't have to have consecutive submissions daily to be the hacker who has max. no. of subs on a particular day.
+*/
+SELECT 
+-- 1
+       s1.submission_date,
+-- 2
+       (SELECT Count(DISTINCT s2.hacker_id) as no_of_unique_hacker_id FROM submissions s2
+        WHERE  s2.submission_date = s1.submission_date
+-- Two conditions: first one being an implicit join on submission date for s1 and s2
+-- second one is to ensure the hacker has consecutive day submission on previous days up until the last day of the contest. This part is essentially a for loop for each submission date in s1.
+        AND (SELECT Count(DISTINCT s3.submission_date)
+             FROM   submissions s3
+             WHERE  s3.hacker_id = s2.hacker_id
+             AND s3.submission_date < s1.submission_date
+            ) = Datediff(s1.submission_date, '2016-03-01')
+       ) AS no_of_unique_hackers,
+-- 3       
+       (SELECT s2.hacker_id FROM submissions s2
+        WHERE  s2.submission_date = s1.submission_date
+        GROUP  BY s2.hacker_id
+        ORDER  BY Count(s2.submission_id) DESC, s2.hacker_id ASC LIMIT  1
+       ) AS max_sub_hacker_id,
+-- 4       
+       (SELECT h.name FROM hackers h
+        WHERE  h.hacker_id = max_sub_hacker_id
+       ) AS NAME
+FROM   (SELECT DISTINCT submission_date FROM submissions) s1
+GROUP BY s1.submission_date;
