@@ -1,0 +1,5 @@
+/*
+Working Platform:- DB2, Oracle, MySQL, MS SQL Server
+*/
+SELECT COUNT(CITY) - COUNT(DISTINCT CITY)
+FROM STATION;
